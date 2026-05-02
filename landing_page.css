@@ -9,7 +9,6 @@
 :root {
   --primary: #4f46e5;
   --secondary: #6366f1;
-  --bg: #f5f7fb;
   --glass: rgba(255, 255, 255, 0.6);
   --blur: blur(12px);
   --radius: 18px;
@@ -32,7 +31,6 @@ nav {
   border-bottom: 1px solid rgba(0,0,0,0.05);
   position: sticky;
   top: 0;
-  z-index: 1000;
 }
 
 nav ul {
@@ -56,23 +54,11 @@ nav a:hover {
   color: var(--primary);
 }
 
-nav a.active {
-  background: var(--primary);
-  color: white;
-}
-
 /* CONTAINER */
 .container {
-  max-width: 1000px;
+  max-width: 1100px;
   margin: var(--space) auto;
   padding: 0 20px;
-}
-
-/* TITLE */
-h1 {
-  text-align: center;
-  margin-bottom: var(--space);
-  font-size: 32px;
 }
 
 /* CARD */
@@ -83,24 +69,7 @@ h1 {
   padding: 25px;
   margin-bottom: 25px;
   box-shadow: var(--shadow);
-  transition: 0.3s;
 }
-
-.card:hover {
-  transform: translateY(-6px);
-}
-
-/* DASHBOARD */
-.dashboard {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 25px;
-}
-
-/* STATUS */
-.card.pemasukan { border-left: 5px solid #22c55e; }
-.card.pengeluaran { border-left: 5px solid #ef4444; }
-.card.kas { border-left: 5px solid #3b82f6; }
 
 /* FORM */
 form {
@@ -113,22 +82,12 @@ form {
   margin: auto;
 }
 
-form label {
-  display: block;
-  margin-bottom: 5px;
-}
-
 form input {
   width: 100%;
   padding: 12px;
   margin-bottom: 20px;
   border-radius: 10px;
   border: 1px solid #ddd;
-}
-
-form input:focus {
-  border-color: var(--primary);
-  outline: none;
 }
 
 form button {
@@ -139,12 +98,6 @@ form button {
   background: linear-gradient(90deg, var(--primary), var(--secondary));
   color: white;
   font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-form button:hover {
-  transform: scale(1.03);
 }
 
 /* TABLE */
@@ -160,9 +113,10 @@ table {
 table th {
   background: var(--primary);
   color: white;
+  padding: 14px;
 }
 
-table th, table td {
+table td {
   padding: 14px;
   text-align: center;
 }
@@ -171,68 +125,10 @@ table tr:nth-child(even) {
   background: #f9fafb;
 }
 
-/* ABOUT (SEJAJAR KIRI-KANAN) */
-.about-section {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
-  width: 100%;
-}
-
-.about-text {
-  flex: 1;
-  max-width: 500px;
-}
-
-.about-text h1 {
-  margin-bottom: 15px;
-  color: var(--primary);
-}
-
-.about-text h4 {
-  margin-top: 15px;
-  color: var(--primary);
-}
-
-.about-text p {
-  margin-top: 5px;
-  line-height: 1.6;
-}
-
-.about-text ul {
-  margin-top: 10px;
-  padding-left: 20px;
-}
-
-.about-text ul li {
-  margin-bottom: 8px;
-}
-
-/* GAMBAR */
-.about-image {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-}
-
-.about-image img {
-  width: 260px;
-  max-width: 100%;
-  animation: float 3s ease-in-out infinite;
-}
-
-/* ANIMASI */
-@keyframes float {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0); }
-}
-
 /* RESPONSIVE */
-@media (max-width: 768px) {
-  .about-section {
+@media (max-width:768px){
+  nav ul{
     flex-direction: column;
-    text-align: center;
+    gap: 10px;
   }
 }

@@ -8,7 +8,7 @@ if(isset($_POST['data_baru'])){
 
   
     $pemasukan01->update($ID,$KETERANGAN,$JUMLAH);
-    header("Location: ../index.php?page=laporan");
+    header("Location: ../landing_page.php?page=laporan");
 
 
 }

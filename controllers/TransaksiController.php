@@ -9,7 +9,7 @@ if(isset($_POST['kirim_pemasukan'])){
 
     $pemasukan = new pemasukan();
     $pemasukan->creat(NULL ,$KETERANGAN, $JUMLAH);
-    header("Location: ../index.php?page=dashboard");
+    header("Location: ../landing_page.php?page=dashboard");
 }
 
 if(isset($_POST['kirim_pengeluaran'])){
@@ -18,5 +18,5 @@ if(isset($_POST['kirim_pengeluaran'])){
 
     $pengeluaran = new pengeluaran();
     $pengeluaran->creat(NULL ,$KETERANGAN, $JUMLAH);
-    header("Location: ../index.php?page=dashboard");
+    header("Location: ../landing_page.php?page=dashboard");
 }

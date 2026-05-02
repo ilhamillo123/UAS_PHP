@@ -4,6 +4,6 @@ $ID = $_GET['ID'];
 
 $pemasukan = new pemasukan();
 $pemasukan->delete($ID);
-header("Location: ../index.php?page=laporan")
+header("Location: ../landing_page.php?page=laporan")
 
 ?>

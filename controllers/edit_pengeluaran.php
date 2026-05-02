@@ -8,7 +8,7 @@ if(isset($_POST['kirim_pengeluaran'])){
     $JUMLAH = $_POST['JUMLAH'];
 
     $pengeluaran->update($ID,$KETERANGAN,$JUMLAH);
-    header("Location: ../index.php?page=laporan");
+    header("Location: ../landing_page.php?page=laporan");
 }
 
 
