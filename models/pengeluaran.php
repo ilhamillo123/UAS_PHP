@@ -4,7 +4,7 @@ class pengeluaran   extends connect{
     protected $conn;
 
     public function creat($ID ,$KETERANGAN, $JUMLAH){
-        $sql = "INSERT INTO pengeluaran (ID, KETERANGAN, JUMLAH) VALUES ('$ID', '$KETERANGAN', '$JUMLAH')";
+        $sql = "INSERT INTO pengeluaran (NULL, KETERANGAN, JUMLAH) VALUES ('$ID' '$KETERANGAN', '$JUMLAH')";
         $result = $this->getConnection()->query($sql);
         return $result ? true : false;
     }

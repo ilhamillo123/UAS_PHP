@@ -14,6 +14,7 @@ $pengeluaran = new pengeluaran();
 $data_pemasukan = $pemasukan->read();
 $data_pengeluaran = $pengeluaran->read();
 
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,26 +26,46 @@ $data_pengeluaran = $pengeluaran->read();
 <body>
     <table border="1">
         <tr>
+            <th>id</th>
             <th>KETERANGAN</th>
             <th>JUMLAH</th>
+            <th>UPDATE</th>
+            <th>DELETE</th>
         </tr>
-        <?php foreach ($data_pemasukan as $pemasukan) { ?>
+        <?php foreach ($data_pemasukan as $row) { ?>
             <tr>
-                <td><?php echo $pemasukan['KETERANGAN']; ?></td>
-                <td><?php echo $pemasukan['JUMLAH']; ?></td>
+                <td><?php echo $row['ID']; ?></td>
+                <td><?php echo $row['KETERANGAN']; ?></td>
+                <td><?php echo $row['JUMLAH']; ?></td>
+                <td>
+                    <a href="/TUGAS_UAS/controllers/edit_pemasukan.php?ID=<?= $row['ID']; ?>">UPDATE</a>
+                <td>
+                    <a href="/TUGAS_UAS/controllers/delete_pemasukan.php?ID=<?= $row['ID']; ?>">DELETE</a>
+                </td>
+               
+                
             </tr>
         <?php } ?>
     </table>
 
     <table border="1">
         <tr>
+            <th>ID</th>
             <th>KETERANGAN</th>
             <th>JUMLAH</th>
+            <th>UPDATE</th>
+            <th>DELETE</th>
         </tr>
         <?php foreach ($data_pengeluaran as $pengeluaran) { ?>
             <tr>
+                <td><?php echo $pengeluaran['ID']; ?></td>
                 <td><?php echo $pengeluaran['KETERANGAN']; ?></td>
                 <td><?php echo $pengeluaran['JUMLAH']; ?></td>
+                <td><a href="/TUGAS_UAS/controllers/edit_pengeluaran.php?ID=<?= $pengeluaran['ID'] ?>">UPDATE</a></td>
+                <td><a href="/TUGAS_UAS//controllers/delete_pengeluaran.php?ID=<?= $pengeluaran['ID'] ?>">HAPUS</a></td>
+  
+                
+
             </tr>
         <?php } ?>
 </body>
