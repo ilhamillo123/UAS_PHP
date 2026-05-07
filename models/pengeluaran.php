@@ -3,8 +3,8 @@ require_once __DIR__ . "/../config/connect.php";
 class pengeluaran   extends connect{
     protected $conn;
 
-    public function creat($KETERANGAN, $JUMLAH){
-        $sql = "INSERT INTO pengeluaran (KETERANGAN, JUMLAH) VALUES ('$KETERANGAN', '$JUMLAH')";
+    public function creat($ID,$KETERANGAN, $JUMLAH){
+        $sql = "INSERT INTO pengeluaran (ID,KETERANGAN, JUMLAH) VALUES (NULL,'$KETERANGAN', '$JUMLAH')";
         $result = $this->getConnection()->query($sql);
         return $result ? true : false;
     }

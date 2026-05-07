@@ -16,6 +16,7 @@
                 <li><a href="landing_page.php?page=dashboard">Dashboard</a></li>
                 <li><a href="landing_page.php?page=laporan">Laporan</a></li>
                 <li><a href="landing_page.php?page=tambah_transaksi">Tambah Transaksi</a></li>
+                <li><a href="index.php">keluar</a></li>
             </ul>
         </nav>
     </header>
@@ -34,7 +35,7 @@
 
             } elseif($page == 'tambah_transaksi') {
                 include 'views/tambah_transaksi.php';
-            }
+            } 
             ?>
         </div>
     </main>
