@@ -8,7 +8,9 @@ if(isset($_POST['kirim_pemasukan'])){
     $JUMLAH =$_POST['JUMLAH'];
 
     $pemasukan = new pemasukan();
-    $pemasukan->creat(NULL ,$KETERANGAN, $JUMLAH);
+    $pemasukan->setKETERANGAN($KETERANGAN);
+    $pemasukan->setJUMLAH($JUMLAH);
+    $pemasukan->creat();
     header("Location: ../landing_page.php?page=dashboard");
 }
 
@@ -17,6 +19,8 @@ if(isset($_POST['kirim_pengeluaran'])){
     $JUMLAH =$_POST['JUMLAH'];
 
     $pengeluaran = new pengeluaran();
-    $pengeluaran->creat(NULL ,$KETERANGAN, $JUMLAH);
+    $pengeluaran->setKETERANGAN($KETERANGAN);
+    $pengeluaran->setJUMLAH($JUMLAH);
+    $pengeluaran->creat();
     header("Location: ../landing_page.php?page=dashboard");
 }

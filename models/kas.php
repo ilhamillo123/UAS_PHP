@@ -4,7 +4,9 @@ require_once "Pemasukan.php";
 require_once "Pengeluaran.php";
 
 class kas extends connect{
-    public $conn;
+    
+
+    
 
  
     function JUMLAH_pemasukan(){

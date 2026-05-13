@@ -7,7 +7,10 @@ if(isset($_POST['kirim_pengeluaran'])){
     $KETERANGAN = $_POST['KETERANGAN'];
     $JUMLAH = $_POST['JUMLAH'];
 
-    $pengeluaran->update($ID,$KETERANGAN,$JUMLAH);
+    $pengeluaran->setID($ID);
+    $pengeluaran->setKETERANGAN($KETERANGAN);
+    $pengeluaran->setJUMLAH($JUMLAH);
+    $pengeluaran->update();
     header("Location: ../landing_page.php?page=laporan");
 }
 

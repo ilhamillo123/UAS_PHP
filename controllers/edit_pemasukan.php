@@ -7,7 +7,10 @@ if(isset($_POST['data_baru'])){
     $JUMLAH = $_POST['jumlah'];
 
   
-    $pemasukan01->update($ID,$KETERANGAN,$JUMLAH);
+    $pemasukan01->setID($ID);
+    $pemasukan01->setKETERANGAN($KETERANGAN);
+    $pemasukan01->setJUMLAH($JUMLAH);
+    $pemasukan01->update();
     header("Location: ../landing_page.php?page=laporan");
 
 
