@@ -11,7 +11,7 @@ class kas extends connect{
  
     function JUMLAH_pemasukan(){
         $sql = "SELECT SUM(JUMLAH) AS total_pemasukan FROM pemasukan";
-        $result01 = $this->getConnection()->query($sql);
+        $result01 = $this->conn->query($sql);
         if ($result01 && $row = $result01->fetch_assoc()) {
             return $row['total_pemasukan'] ?? 0;
         }

@@ -10,7 +10,7 @@ class pemasukan extends connect{
 
     public function getID(){
         return $this->ID;
-}
+    }
     public function getKETERANGAN(){
         return $this->KETERANGAN;
     }
